@@ -11,8 +11,9 @@
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(true);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap);"]);
+exports.push([module.i, "@import url(https://fonts.googleapis.com/icon?family=Material+Icons);"]);
 // Module
-exports.push([module.i, ":root {\n  --menu-height: 50px;\n  --menu-padding: 10px;\n}\n\nbody,\nhtml {\n  height: 100%;\n  margin: 0;\n}\n\n* {\n  font-family: \"Roboto\", sans-serif;\n}\n", "",{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAEA;EACE,mBAAmB;EACnB,oBAAoB;AACtB;;AAEA;;EAEE,YAAY;EACZ,SAAS;AACX;;AAEA;EACE,iCAAiC;AACnC","file":"styles.css","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap\");\n\n:root {\n  --menu-height: 50px;\n  --menu-padding: 10px;\n}\n\nbody,\nhtml {\n  height: 100%;\n  margin: 0;\n}\n\n* {\n  font-family: \"Roboto\", sans-serif;\n}\n"]}]);
+exports.push([module.i, ":root {\n  --menu-height: 50px;\n  --menu-padding: 10px;\n\n  --brand-purple: #562bff;\n}\nbody,\nhtml {\n  height: 100%;\n  margin: 0;\n}\n* {\n  font-family: \"Roboto\", sans-serif;\n}\n", "",{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAGA;EACE,mBAAmB;EACnB,oBAAoB;;EAEpB,uBAAuB;AACzB;AAEA;;EAEE,YAAY;EACZ,SAAS;AACX;AAEA;EACE,iCAAiC;AACnC","file":"styles.css","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap\");\n@import url(\"https://fonts.googleapis.com/icon?family=Material+Icons\");\n\n:root {\n  --menu-height: 50px;\n  --menu-padding: 10px;\n\n  --brand-purple: #562bff;\n}\n\nbody,\nhtml {\n  height: 100%;\n  margin: 0;\n}\n\n* {\n  font-family: \"Roboto\", sans-serif;\n}\n"]}]);
 // Exports
 module.exports = exports;
 
