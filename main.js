@@ -103,21 +103,21 @@ class AppComponent {
         this.slides = new src_app_shared_slides_barcelona92_slides__WEBPACK_IMPORTED_MODULE_3__["Barcelona92"]().slides;
         // Schedule
         this.scheduleData = [
-            { display: '00h :: Fil Nocturn', link: '/shows/latitudes' },
-            { display: '08h :: dublab AM', link: '/shows/latitudes' },
-            { display: '10h :: Latitudes (R)', link: '/shows/latitudes' },
-            { display: '12h :: Bucles (R)', link: '/shows/latitudes' },
-            { display: '13h :: Campo Base (R)', link: '/shows/latitudes' },
-            { display: '14h :: Lummerland (R)', link: '/shows/latitudes' },
-            { display: '15h :: Mil i Una Nits (R)', link: '/shows/latitudes' },
-            { display: '16h :: Malas Ideas', link: '/shows/latitudes' },
-            { display: '17h :: The Sauce', link: '/shows/latitudes' },
-            { display: '18h :: Amuletos', link: '/shows/latitudes' },
-            { display: '19h :: Gravità Permanente', link: '/shows/latitudes' },
-            { display: '20h :: Sonido Tupinamba (R)', link: '/shows/latitudes' },
-            { display: '21h :: Círculo de Borneo (R)', link: '/shows/latitudes' },
-            { display: '22h :: B-Sides: Lupus (R)', link: '/shows/mcguffin' },
-            { display: '23h :: El Lago (R)', link: '/shows/casa-da-crega' },
+            { display: '00h :: Fil Nocturn', link: '/shows/latitudes', hour: 0 },
+            { display: '08h :: dublab AM', link: '/shows/latitudes', hour: 8 },
+            { display: '10h :: Latitudes (R)', link: '/shows/latitudes', hour: 10 },
+            { display: '12h :: Bucles (R)', link: '/shows/latitudes', hour: 12 },
+            { display: '13h :: Campo Base (R)', link: '/shows/latitudes', hour: 13 },
+            { display: '14h :: Lummerland (R)', link: '/shows/latitudes', hour: 14 },
+            { display: '15h :: Mil i Una Nits (R)', link: '/shows/latitudes', hour: 15 },
+            { display: '16h :: Malas Ideas', link: '/shows/latitudes', hour: 16 },
+            { display: '17h :: The Sauce', link: '/shows/latitudes', hour: 17 },
+            { display: '18h :: Amuletos', link: '/shows/latitudes', hour: 18 },
+            { display: '19h :: Gravità Permanente', link: '/shows/latitudes', hour: 19 },
+            { display: '20h :: Sonido Tupinamba (R)', link: '/shows/latitudes', hour: 20 },
+            { display: '21h :: Círculo de Borneo (R)', link: '/shows/latitudes', hour: 21 },
+            { display: '22h :: B-Sides: Lupus (R)', link: '/shows/mcguffin', hour: 22 },
+            { display: '23h :: El Lago (R)', link: '/shows/casa-da-crega', hour: 23 },
         ];
         this.mouseOnScheduleDropDown = false;
         this.mouseOnScheduleMenu = false;
@@ -772,12 +772,15 @@ CarouselComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DropDownComponent", function() { return DropDownComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_shared_services_time_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/shared/services/time.service */ "./src/app/shared/services/time.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
 
 
 
+
+const _c0 = function (a0) { return { transparent: a0 }; };
 function DropDownComponent_div_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span", 2);
@@ -786,8 +789,10 @@ function DropDownComponent_div_1_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const menuItem_r2 = ctx.$implicit;
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("routerLink", menuItem_r2.link);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction1"](3, _c0, ctx_r0.hasAlreadyTakenPlace(menuItem_r2.hour)));
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](menuItem_r2.display);
 } }
@@ -807,11 +812,15 @@ function DropDownComponent_div_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](link_r3.display);
 } }
 class DropDownComponent {
-    constructor() {
+    constructor(timeService) {
+        this.timeService = timeService;
         this.mouseEnter = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.mouseLeave = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
     ngOnInit() {
+    }
+    hasAlreadyTakenPlace(hour) {
+        return hour < this.timeService.currentHour;
     }
     onMouseEnter() {
         this.mouseEnter.emit();
@@ -820,11 +829,11 @@ class DropDownComponent {
         this.mouseLeave.emit();
     }
 }
-DropDownComponent.ɵfac = function DropDownComponent_Factory(t) { return new (t || DropDownComponent)(); };
-DropDownComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DropDownComponent, selectors: [["drop-down"]], inputs: { menuData: "menuData", links: "links" }, outputs: { mouseEnter: "mouseEnter", mouseLeave: "mouseLeave" }, decls: 3, vars: 2, consts: [[3, "mouseenter", "mouseleave"], [4, "ngFor", "ngForOf"], [1, "profile-link", "pointer", 3, "routerLink"], ["target", "_blank", 3, "href"], [1, "profile-link", "pointer"]], template: function DropDownComponent_Template(rf, ctx) { if (rf & 1) {
+DropDownComponent.ɵfac = function DropDownComponent_Factory(t) { return new (t || DropDownComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_services_time_service__WEBPACK_IMPORTED_MODULE_1__["TimeService"])); };
+DropDownComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DropDownComponent, selectors: [["drop-down"]], inputs: { menuData: "menuData", links: "links" }, outputs: { mouseEnter: "mouseEnter", mouseLeave: "mouseLeave" }, decls: 3, vars: 2, consts: [[3, "mouseenter", "mouseleave"], [4, "ngFor", "ngForOf"], [1, "profile-link", "pointer", 3, "ngClass", "routerLink"], ["target", "_blank", 3, "href"], [1, "profile-link", "pointer"]], template: function DropDownComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mouseenter", function DropDownComponent_Template_div_mouseenter_0_listener() { return ctx.onMouseEnter(); })("mouseleave", function DropDownComponent_Template_div_mouseleave_0_listener() { return ctx.onMouseLeave(); });
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, DropDownComponent_div_1_Template, 3, 2, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, DropDownComponent_div_1_Template, 3, 5, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, DropDownComponent_div_2_Template, 4, 2, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } if (rf & 2) {
@@ -832,7 +841,7 @@ DropDownComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.menuData);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.links);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["NgForOf"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"]], styles: ["[_nghost-%COMP%] {\n    background-color: white;\n    color: black;\n    padding: 10px;\n    z-index: 10000;\n    position: absolute;\n    bottom: 49px;\n    left: 100;\n}\n\n[_nghost-%COMP%]    > *[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    padding: 5px;\n}\n\n.profile-link[_ngcontent-%COMP%]:hover {\n    text-decoration: underline;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2Ryb3AtZG93bi9kcm9wLWRvd24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHVCQUF1QjtJQUN2QixZQUFZO0lBQ1osYUFBYTtJQUNiLGNBQWM7SUFDZCxrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLFNBQVM7QUFDYjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSwwQkFBMEI7QUFDOUIiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvZHJvcC1kb3duL2Ryb3AtZG93bi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgIGNvbG9yOiBibGFjaztcbiAgICBwYWRkaW5nOiAxMHB4O1xuICAgIHotaW5kZXg6IDEwMDAwO1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICBib3R0b206IDQ5cHg7XG4gICAgbGVmdDogMTAwO1xufVxuXG46aG9zdCA+ICogPiAqIHtcbiAgICBwYWRkaW5nOiA1cHg7XG59XG5cbi5wcm9maWxlLWxpbms6aG92ZXIge1xuICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xufSJdfQ== */"] });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgClass"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLink"]], styles: ["[_nghost-%COMP%] {\n    background-color: white;\n    color: black;\n    padding: 10px;\n    z-index: 10000;\n    position: absolute;\n    bottom: 49px;\n    left: 100;\n}\n\n[_nghost-%COMP%]    > *[_ngcontent-%COMP%]    > *[_ngcontent-%COMP%] {\n    padding: 2px;\n}\n\n.profile-link[_ngcontent-%COMP%]:hover {\n    text-decoration: underline;\n    color: var(--brand-purple);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hhcmVkL2Ryb3AtZG93bi9kcm9wLWRvd24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLHVCQUF1QjtJQUN2QixZQUFZO0lBQ1osYUFBYTtJQUNiLGNBQWM7SUFDZCxrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLFNBQVM7QUFDYjs7QUFFQTtJQUNJLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSwwQkFBMEI7SUFDMUIsMEJBQTBCO0FBQzlCIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL2Ryb3AtZG93bi9kcm9wLWRvd24uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgcGFkZGluZzogMTBweDtcbiAgICB6LWluZGV4OiAxMDAwMDtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgYm90dG9tOiA0OXB4O1xuICAgIGxlZnQ6IDEwMDtcbn1cblxuOmhvc3QgPiAqID4gKiB7XG4gICAgcGFkZGluZzogMnB4O1xufVxuXG4ucHJvZmlsZS1saW5rOmhvdmVyIHtcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbiAgICBjb2xvcjogdmFyKC0tYnJhbmQtcHVycGxlKTtcbn0iXX0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DropDownComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -840,7 +849,7 @@ DropDownComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
                 templateUrl: './drop-down.component.html',
                 styleUrls: ['./drop-down.component.css'],
             }]
-    }], function () { return []; }, { menuData: [{
+    }], function () { return [{ type: src_app_shared_services_time_service__WEBPACK_IMPORTED_MODULE_1__["TimeService"] }]; }, { menuData: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }], links: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
@@ -887,6 +896,43 @@ class PlayerService {
 PlayerService.ɵfac = function PlayerService_Factory(t) { return new (t || PlayerService)(); };
 PlayerService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: PlayerService, factory: PlayerService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PlayerService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return []; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/shared/services/time.service.ts":
+/*!*************************************************!*\
+  !*** ./src/app/shared/services/time.service.ts ***!
+  \*************************************************/
+/*! exports provided: TimeService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimeService", function() { return TimeService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+class TimeService {
+    constructor() {
+        this.refreshHour();
+        setInterval(() => {
+            this.refreshHour();
+        }, 60000);
+    }
+    refreshHour() {
+        // Should actually get the hour from an external API
+        this.currentHour = new Date().getHours();
+    }
+}
+TimeService.ɵfac = function TimeService_Factory(t) { return new (t || TimeService)(); };
+TimeService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: TimeService, factory: TimeService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TimeService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{
                 providedIn: 'root'
@@ -1353,9 +1399,10 @@ function StreamerComponent_ng_template_6_Template(rf, ctx) { if (rf & 1) {
 class StreamerComponent {
     constructor(playerService) {
         this.playerService = playerService;
+        this.generateClock();
         setInterval(() => {
-            this.hour = new Date().toString().split(' ')[4].substr(0, 5);
-        }, 1);
+            this.generateClock();
+        }, 60000);
     }
     ngOnInit() {
         src_app_streamer_marquee__WEBPACK_IMPORTED_MODULE_1__["initializeMarquee"]();
@@ -1365,6 +1412,11 @@ class StreamerComponent {
     }
     toggleTuneIn() {
         this.playerService.toggleTuneIn();
+    }
+    generateClock() {
+        const date = new Date();
+        date.setHours(new Date().getUTCHours() + 2);
+        this.hour = date.toString().split(' ')[4].substr(0, 5);
     }
 }
 StreamerComponent.ɵfac = function StreamerComponent_Factory(t) { return new (t || StreamerComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_services_player_service__WEBPACK_IMPORTED_MODULE_2__["PlayerService"])); };
