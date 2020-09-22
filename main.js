@@ -826,7 +826,7 @@ class DropDownComponent {
     hasAlreadyTakenPlace(next) {
         if (next && next.hour) {
             const nextShowsHour = next.hour;
-            return nextShowsHour < this.timeService.currentHour;
+            return nextShowsHour <= this.timeService.currentHour;
         }
         return false;
     }
