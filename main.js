@@ -109,7 +109,7 @@ class AppComponent {
     constructor(playerService, dataService) {
         this.playerService = playerService;
         this.dataService = dataService;
-        this.title = 'dublab';
+        this.title = 'dublab bcn';
         this.canShowTooltip = false;
         this.animationType = _shared_carousel_carousel_animations__WEBPACK_IMPORTED_MODULE_2__["AnimationType"].Fade;
         this.slides = new src_app_shared_slides_barcelona92_slides__WEBPACK_IMPORTED_MODULE_3__["Barcelona92"]().slides;
@@ -1298,10 +1298,6 @@ class Barcelona92 {
                 src: "assets/collections/barcelona92/1_panoramica_luis_ochandorena.jpg"
             },
             {
-                headline: "Pabellón Mies van der Rohe",
-                src: "assets/collections/barcelona92/2_mies_van_der_rohe.jpg"
-            },
-            {
                 headline: "Pavelló Mies van der Rohe",
                 src: "assets/collections/barcelona92/2_mies_van_der_rohe.jpg"
             },
@@ -1410,10 +1406,6 @@ class Barcelona92 {
                 src: "assets/collections/barcelona92/28_grues_studio_pomes.jpg"
             },
             {
-                headline: "Baixell - Studio Pomes",
-                src: "assets/collections/barcelona92/29_baixell_studio_pomes.jpg"
-            },
-            {
                 headline: "Raval - Studio Pomes",
                 src: "assets/collections/barcelona92/30_raval_studio_pomes.jpg"
             },
@@ -1442,10 +1434,6 @@ class Barcelona92 {
                 src: "assets/collections/barcelona92/36_entrada_casa_studio_pomes.jpg"
             },
             {
-                headline: "Carrer Hospital - Studio Pomes",
-                src: "assets/collections/barcelona92/37_carrer_hospital_studio_pomes.jpg"
-            },
-            {
                 headline: "Sala Bagdad - Studio Pomes",
                 src: "assets/collections/barcelona92/38_bagdad_studio_pomes.jpg"
             },
@@ -1456,10 +1444,6 @@ class Barcelona92 {
             {
                 headline: "Manifestació feminista - P. Virgili",
                 src: "assets/collections/barcelona92/40_manifa_dones_p_virgili.jpg"
-            },
-            {
-                headline: "Senyores amb un ordinador",
-                src: "assets/collections/barcelona92/41_senyores_ordinador.jpg"
             },
             {
                 headline: "Pau i Sagrada Familia",
@@ -1506,16 +1490,8 @@ class Barcelona92 {
                 src: "assets/collections/barcelona92/52_sant_adria_j_todo.jpg"
             },
             {
-                headline: "Grill Room",
-                src: "assets/collections/barcelona92/53_grill_room.jpg"
-            },
-            {
                 headline: "Manifestació LGTB - Man Costas",
                 src: "assets/collections/barcelona92/54_manifa_gay_man_costas.jpg"
-            },
-            {
-                headline: "Institut Botànic - Jordi Folch",
-                src: "assets/collections/barcelona92/55_institut_botanic_j_folch.jpg"
             },
             {
                 headline: "Rentadores - Pau Quesada i Vila",
@@ -1560,10 +1536,6 @@ class Barcelona92 {
             {
                 headline: "Pavelló de Mies Van der Rohe - Montse Catalán",
                 src: "assets/collections/barcelona92/66_pavello_mies_montse_catalan.jpg"
-            },
-            {
-                headline: "Poble Nou Mar - Paco Elvira",
-                src: "assets/collections/barcelona92/67_poble_nou_mar_paco_elvira.jpg"
             },
             {
                 headline: "Besós - Paco Elvira",
@@ -1612,6 +1584,98 @@ class Barcelona92 {
             {
                 headline: "Estadi Olímpic - Helena Mallafré",
                 src: "assets/collections/barcelona92/79_estadi_olimpic_helena_mallafre.jpg"
+            },
+            {
+                headline: "Pescadors",
+                src: "assets/collections/barcelona92/80_pescadors.jpg"
+            },
+            {
+                headline: "Baixells",
+                src: "assets/collections/barcelona92/81_baixells.jpg"
+            },
+            {
+                headline: "Port",
+                src: "assets/collections/barcelona92/82_port.jpg"
+            },
+            {
+                headline: "La Ciutadella",
+                src: "assets/collections/barcelona92/83_la_ciutadella.jpg"
+            },
+            {
+                headline: "Bar",
+                src: "assets/collections/barcelona92/84_bar.jpg"
+            },
+            {
+                headline: "Turó Parc",
+                src: "assets/collections/barcelona92/85_turo_parc.jpg"
+            },
+            {
+                headline: "Edificis Zona Universitaria",
+                src: "assets/collections/barcelona92/86_edificis_zona_universitaria.jpg"
+            },
+            {
+                headline: "Parc Diagonal",
+                src: "assets/collections/barcelona92/87_parc_diagonal.jpg"
+            },
+            {
+                headline: "Parc Güell",
+                src: "assets/collections/barcelona92/88_parc_guell.jpg"
+            },
+            {
+                headline: "Tibidabo",
+                src: "assets/collections/barcelona92/89_tibidabo.jpg"
+            },
+            {
+                headline: "Pescadors",
+                src: "assets/collections/barcelona92/90_pescadors.jpg"
+            },
+            {
+                headline: "Pescador Mar",
+                src: "assets/collections/barcelona92/91_pescador_mar.jpg"
+            },
+            {
+                headline: "Plaça Reial",
+                src: "assets/collections/barcelona92/92_placa_reial.jpg"
+            },
+            {
+                headline: "Lonja",
+                src: "assets/collections/barcelona92/93_lonja.jpg"
+            },
+            {
+                headline: "Casa de les Punxes",
+                src: "assets/collections/barcelona92/94_casa_de_les_punxes.jpg"
+            },
+            {
+                headline: "Teleferic",
+                src: "assets/collections/barcelona92/95_teleferic.jpg"
+            },
+            {
+                headline: "Pedralbes",
+                src: "assets/collections/barcelona92/96_pedralbes.jpg"
+            },
+            {
+                headline: "Casa Güell",
+                src: "assets/collections/barcelona92/97_casa_guell.jpg"
+            },
+            {
+                headline: "Parc Güell",
+                src: "assets/collections/barcelona92/98_parc_guell.jpg"
+            },
+            {
+                headline: "Arcoiris",
+                src: "assets/collections/barcelona92/99_arco_iris.jpg"
+            },
+            {
+                headline: "Fundació Miro",
+                src: "assets/collections/barcelona92/100_fundacio_miro.jpg"
+            },
+            {
+                headline: "Fiesta Espuma",
+                src: "assets/collections/barcelona92/101_fiesta_espuma.jpg"
+            },
+            {
+                headline: "Carrer Llança",
+                src: "assets/collections/barcelona92/103_carrer_llanca.jpg"
             }
         ];
     }
