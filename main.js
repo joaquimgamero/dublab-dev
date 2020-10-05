@@ -674,8 +674,9 @@ class CarouselComponent {
         event.preventDefault();
     }
     preloadImage(slide) {
-        console.log(slide);
-        new Image().src = slide.src;
+        if (slide.src) {
+            new Image().src = slide.src;
+        }
     }
     getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -1097,7 +1098,7 @@ class DataService {
             const currentShow = pastShows[pastShows.length - 1];
             return currentShow;
         }
-        return { name: '', hour: 0 };
+        return { display: '', hour: 0 };
     }
     get nextShow() {
         if (this.todaysSchedule) {
@@ -1108,7 +1109,7 @@ class DataService {
             }
             return nextShow;
         }
-        return { name: '', hour: 0 };
+        return { display: '', hour: 0 };
     }
     // Public Methods
     createTodaysSchedule() {
@@ -1135,7 +1136,7 @@ class DataService {
     }
     // Private Methods
     getHourFromDate(date) {
-        const currentHour = new Date(date).getHours();
+        const currentHour = new Date(date.toString().replace(/\s/, 'T')).getHours();
         if (currentHour < 10)
             return '0' + currentHour.toString();
         return currentHour.toString();
@@ -1258,7 +1259,7 @@ class TimeService {
     }
     refreshHour() {
         this.liveInfoSubscription = this.getLiveInfo().subscribe(liveInfo => {
-            const airtimeTime = new Date(liveInfo.schedulerTime);
+            const airtimeTime = new Date(liveInfo.schedulerTime.split('-').join('/'));
             this.todaysWeekName = this.generateDayName(airtimeTime);
             this.airtimeTime$.next(airtimeTime);
             this.currentHour$.next(airtimeTime.getHours());
@@ -1270,7 +1271,8 @@ class TimeService {
         return this.http.get(`${this.baseUrl}/live-info`);
     }
     generateDayName(date) {
-        return new Date(date).toLocaleDateString("en-EN", { weekday: 'long' }).toLowerCase();
+        const dayName = new Date(date).toLocaleDateString("en-EN", { weekday: 'long' }).toLowerCase();
+        return dayName;
     }
 }
 TimeService.ɵfac = function TimeService_Factory(t) { return new (t || TimeService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"])); };
@@ -1853,7 +1855,11 @@ class StreamerComponent {
         this.playerService.toggleTuneIn();
     }
     generateClock(date) {
-        this.hour = date.toString().split(' ')[4].substr(0, 5);
+        const dateString = date.toString();
+        const dateChars = dateString.split(' ');
+        if (!dateChars.includes('Invalid')) {
+            this.hour = dateChars[4].substr(0, 5);
+        }
     }
 }
 StreamerComponent.ɵfac = function StreamerComponent_Factory(t) { return new (t || StreamerComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_services_player_service__WEBPACK_IMPORTED_MODULE_2__["PlayerService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_services_time_service__WEBPACK_IMPORTED_MODULE_3__["TimeService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_services_data_service__WEBPACK_IMPORTED_MODULE_4__["DataService"])); };
