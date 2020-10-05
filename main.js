@@ -638,7 +638,7 @@ class CarouselComponent {
         this.currentSlide = 0;
     }
     ngOnInit() {
-        this.preloadImages();
+        // this.preloadImages();
         if (this.random)
             this.randomClick();
         if (this.autoTime > 0) {
@@ -655,22 +655,27 @@ class CarouselComponent {
         this.currentSlide = previous < 0 ? this.slides.length - 1 : previous;
     }
     onNextClick(skip = 1) {
-        const next = this.currentSlide + skip;
-        this.currentSlide = next === this.slides.length ? 0 : next;
+        if (!this.cachedNextImageId) {
+            this.cachedNextImageId = this.currentSlide + skip;
+        }
+        this.currentSlide = this.cachedNextImageId === this.slides.length ? 0 : this.cachedNextImageId;
+        this.cachedNextImageId = this.currentSlide + skip;
+        this.preloadImage(this.cachedNextImageId);
     }
     randomClick() {
-        const next = this.getRandomInt(1, this.slides.length);
-        this.currentSlide = next === this.slides.length ?
-            0 :
-            next;
+        if (!this.cachedNextImageId) {
+            this.cachedNextImageId = this.getRandomInt(1, this.slides.length);
+        }
+        this.currentSlide = this.cachedNextImageId === this.slides.length ? 0 : this.cachedNextImageId;
+        this.cachedNextImageId = this.getRandomInt(1, this.slides.length);
+        this.preloadImage(this.slides[this.cachedNextImageId]);
     }
     onRightClick(event) {
         event.preventDefault();
     }
-    preloadImages() {
-        for (const slide of this.slides) {
-            new Image().src = slide.src;
-        }
+    preloadImage(slide) {
+        console.log(slide);
+        new Image().src = slide.src;
     }
     getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
