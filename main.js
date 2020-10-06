@@ -638,7 +638,6 @@ class CarouselComponent {
         this.currentSlide = 0;
     }
     ngOnInit() {
-        // this.preloadImages();
         if (this.random)
             this.randomClick();
         if (this.autoTime > 0) {
@@ -667,13 +666,18 @@ class CarouselComponent {
             this.cachedNextImageId = this.getRandomInt(1, this.slides.length);
         }
         this.currentSlide = this.cachedNextImageId === this.slides.length ? 0 : this.cachedNextImageId;
-        this.cachedNextImageId = this.getRandomInt(1, this.slides.length);
-        this.preloadImage(this.slides[this.cachedNextImageId]);
+        this.cachedNextImageId = this.getRandomInt(0, this.slides.length - 1);
+        this.preloadImage(this.cachedNextImageId);
     }
     onRightClick(event) {
         event.preventDefault();
     }
-    preloadImage(slide) {
+    preloadImage(id) {
+        let slide = this.slides[id];
+        if (!slide) {
+            slide = this.slides[0];
+            this.cachedNextImageId = 0;
+        }
         if (slide.src) {
             new Image().src = slide.src;
         }
