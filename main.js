@@ -407,7 +407,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class CssService {
     constructor() {
-        this.atHomePage = false;
+        this.atHomePage = true;
     }
     get isHomePage() {
         return this.atHomePage;
