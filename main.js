@@ -37,6 +37,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _info_info_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./info/info.component */ "./src/app/info/info.component.ts");
+/* harmony import */ var _shows_show_item_show_item_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./shows/show-item/show-item.component */ "./src/app/shows/show-item/show-item.component.ts");
+
 
 
 
@@ -46,6 +48,8 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     { path: '', component: _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"] },
     { path: 'info', component: _info_info_component__WEBPACK_IMPORTED_MODULE_3__["InfoComponent"] },
+    // Shows
+    { path: ':showSlug', component: _shows_show_item_show_item_component__WEBPACK_IMPORTED_MODULE_4__["ShowItemComponent"] },
 ];
 class AppRoutingModule {
 }
@@ -329,6 +333,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 /* harmony import */ var _shared_pipes_decode_pipe__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./shared/pipes/decode.pipe */ "./src/app/shared/pipes/decode.pipe.ts");
 /* harmony import */ var _info_info_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./info/info.component */ "./src/app/info/info.component.ts");
+/* harmony import */ var _shows_show_item_show_item_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./shows/show-item/show-item.component */ "./src/app/shows/show-item/show-item.component.ts");
+
 
 
 
@@ -361,7 +367,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         _shared_drop_down_drop_down_component__WEBPACK_IMPORTED_MODULE_9__["DropDownComponent"],
         _shared_pipes_dublab_date_pipe__WEBPACK_IMPORTED_MODULE_11__["DublabDatePipe"],
         _shared_pipes_decode_pipe__WEBPACK_IMPORTED_MODULE_13__["DecodePipe"],
-        _info_info_component__WEBPACK_IMPORTED_MODULE_14__["InfoComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _info_info_component__WEBPACK_IMPORTED_MODULE_14__["InfoComponent"],
+        _shows_show_item_show_item_component__WEBPACK_IMPORTED_MODULE_15__["ShowItemComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
         _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"]] }); })();
@@ -376,7 +383,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _shared_drop_down_drop_down_component__WEBPACK_IMPORTED_MODULE_9__["DropDownComponent"],
                     _shared_pipes_dublab_date_pipe__WEBPACK_IMPORTED_MODULE_11__["DublabDatePipe"],
                     _shared_pipes_decode_pipe__WEBPACK_IMPORTED_MODULE_13__["DecodePipe"],
-                    _info_info_component__WEBPACK_IMPORTED_MODULE_14__["InfoComponent"]
+                    _info_info_component__WEBPACK_IMPORTED_MODULE_14__["InfoComponent"],
+                    _shows_show_item_show_item_component__WEBPACK_IMPORTED_MODULE_15__["ShowItemComponent"]
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -454,7 +462,7 @@ class InfoComponent {
     }
 }
 InfoComponent.ɵfac = function InfoComponent_Factory(t) { return new (t || InfoComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_css_service__WEBPACK_IMPORTED_MODULE_1__["CssService"])); };
-InfoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: InfoComponent, selectors: [["info"]], decls: 47, vars: 0, consts: [[1, "header"], [1, "title"], ["routerLink", "/", 1, "material-icons", "pointer"], [1, "content"], ["href", "mailto:es@dublab.com", 1, "link"], [1, "collaborators"], ["src", "assets/Sonar.gif", 1, "collaborator-image"], ["src", "assets/discogs.jpg", 1, "collaborator-image"], ["src", "assets/Mahou.png", 1, "collaborator-image"], ["src", "assets/La Rubia.jpg", 1, "collaborator-image"], ["src", "assets/experimentem.png", 1, "collaborator-image"], ["src", "assets/GTS.jpg", 1, "collaborator-image"], [1, "credits"]], template: function InfoComponent_Template(rf, ctx) { if (rf & 1) {
+InfoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: InfoComponent, selectors: [["info"]], decls: 53, vars: 0, consts: [[1, "header"], [1, "title"], ["routerLink", "/", 1, "material-icons", "pointer"], [1, "content"], ["href", "mailto:es@dublab.com", 1, "link"], [1, "collaborators"], ["src", "assets/Sonar.gif", 1, "collaborator-image"], ["src", "assets/Mahou.png", 1, "collaborator-image"], ["src", "assets/ICUB.jpg", 1, "collaborator-image"], ["src", "assets/discogs.jpg", 1, "collaborator-image"], ["src", "assets/La Rubia.jpg", 1, "collaborator-image"], ["src", "assets/GTS.jpg", 1, "collaborator-image"], ["src", "assets/experimentem.png", 1, "collaborator-image"], [1, "credits"]], template: function InfoComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "span", 2);
@@ -469,7 +477,7 @@ InfoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, " A m\u00E9s de gesti\u00F3 de continguts, organitzem concerts, esdeveniments, projeccions i xerrades. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, " Des del comen\u00E7ament de la nostra activitat hem col\u00B7laborat amb amb espais, organitzacions i festivals com S\u00F2nar, CCCB, HUB, MUTEK, Convent de Sant Agust\u00ED, Arts Libris, Zumzeig, Miscelanea, Flea Market Bcn, Mercat de l\u2019Abaceria, L'Alternativa, FAD, Festival S\u00E2lmon, Ameba Barcelona, tupper, Indepedent Label Market o Palo Alto Market. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, " Des del comen\u00E7ament de la nostra activitat hem col\u00B7laborat amb espais, organitzacions i festivals com S\u00F2nar, CCCB, HUB, MUTEK, Convent de Sant Agust\u00ED, Arts Libris, Zumzeig, Miscelanea, Flea Market Bcn, L'Alternativa, FAD, Festival S\u00E2lmon, Independent Label Market, Ameba Barcelona, tupper o Palo Market. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "br");
@@ -488,26 +496,34 @@ InfoComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComp
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](26, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](28, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](29, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, " Col\u00B7laboren: ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](30, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, " Col\u00B7laboren: ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](32, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](34, "img", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "img", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](36, "img", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](37, "img", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](38, "img", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](39, "img", 11);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](32, "img", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](33, "img", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](34, "img", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "img", 9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](36, "img", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](37, "img", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "p", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](39, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](41, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](42, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](42, " Agra\u00EFments: ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](43, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](44, " Cr\u00E8dits fotografies inici: ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](45, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, " Luis Ochandorena, AISA, Carlos Mart\u00EDnez, AGE Fotostock, Perez Reus, Manel Armengol, COOB 92, Jordi Mestre, Studio Pomes,\nP. Virgili, J. Tod\u00F3, Man Costas, Pau Quesada i Vila, Francisco Onta\u00F1\u00F3n Nu\u00F1ez, Francesc Gom\u00E0, Jordi Trullas, Antonio Lajusticia. Pepe Encinas, Josep Moragues, Paco Elvira, Genin Andrada, Roser Puigdefabregat, Francisco Jos\u00E9 Garc\u00EDa Comaposada, Inma Ravent\u00F3s Moret, Maria Dolors Vinuesa, Helana Mallafr\u00E9, Ferr\u00E1n Freixa i Carlos Carri\u00F3n. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](45, "img", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "p", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](47, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](48, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](49, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](50, " Cr\u00E8dits fotografies inici: ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](51, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](52, " Luis Ochandorena, AISA, Carlos Mart\u00EDnez, AGE Fotostock, Perez Reus, Manel Armengol, COOB 92, Jordi Mestre, Studio Pomes,\nP. Virgili, J. Tod\u00F3, Man Costas, Pau Quesada i Vila, Francisco Onta\u00F1\u00F3n Nu\u00F1ez, Francesc Gom\u00E0, Jordi Trullas, Antonio Lajusticia. Pepe Encinas, Josep Moragues, Paco Elvira, Genin Andrada, Roser Puigdefabregat, Francisco Jos\u00E9 Garc\u00EDa Comaposada, Inma Ravent\u00F3s Moret, Maria Dolors Vinuesa, Helana Mallafr\u00E9, Ferr\u00E1n Freixa i Carlos Carri\u00F3n. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLink"]], styles: ["[_nghost-%COMP%] {\n    height: 100%;\n    background-color: white;\n    display: inline-block;\n    padding: 50px;\n    top: 0;\n    position: absolute;\n    z-index: 1;\n    width: -moz-available;\n    opacity: 0.8;\n}\n\n.header[_ngcontent-%COMP%] {\n    display: grid;\n    grid-template-columns: 1fr 20px;\n}\n\n.title[_ngcontent-%COMP%] {\n        font-size: 20px;\n        margin-bottom: 20px;\n    }\n\n.content[_ngcontent-%COMP%] {\n    width: 95%;\n    overflow-y: scroll;\n    height: inherit;\n    margin-bottom: 50px;\n}\n\n.collaborators[_ngcontent-%COMP%] {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;\n    grid-template-rows: 1fr;\n    gap: 0px 0px;\n    grid-template-areas:\n        \". . . . . . .\";\n}\n\n.collaborator-image[_ngcontent-%COMP%] {\n        height: 70px;\n        margin-right: 20px;\n    }\n\n.credits[_ngcontent-%COMP%] {\n    margin-bottom: 150px;\n}\n\n.link[_ngcontent-%COMP%] {\n    cursor: pointer;\n}\n\n.link[_ngcontent-%COMP%]:hover {\n    text-decoration: underline;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvaW5mby9pbmZvLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0lBQ1osdUJBQXVCO0lBQ3ZCLHFCQUFxQjtJQUNyQixhQUFhO0lBQ2IsTUFBTTtJQUNOLGtCQUFrQjtJQUNsQixVQUFVO0lBQ1YscUJBQXFCO0lBQ3JCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsK0JBQStCO0FBQ25DOztBQUVJO1FBQ0ksZUFBZTtRQUNmLG1CQUFtQjtJQUN2Qjs7QUFFSjtJQUNJLFVBQVU7SUFDVixrQkFBa0I7SUFDbEIsZUFBZTtJQUNmLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLGFBQWE7SUFDYixrREFBa0Q7SUFDbEQsdUJBQXVCO0lBQ3ZCLFlBQVk7SUFDWjt1QkFDbUI7QUFDdkI7O0FBRUk7UUFDSSxZQUFZO1FBQ1osa0JBQWtCO0lBQ3RCOztBQUVKO0lBQ0ksb0JBQW9CO0FBQ3hCOztBQUVBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLDBCQUEwQjtBQUM5QiIsImZpbGUiOiJzcmMvYXBwL2luZm8vaW5mby5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgcGFkZGluZzogNTBweDtcbiAgICB0b3A6IDA7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHotaW5kZXg6IDE7XG4gICAgd2lkdGg6IC1tb3otYXZhaWxhYmxlO1xuICAgIG9wYWNpdHk6IDAuODtcbn1cblxuLmhlYWRlciB7XG4gICAgZGlzcGxheTogZ3JpZDtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmciAyMHB4O1xufVxuXG4gICAgLnRpdGxlIHtcbiAgICAgICAgZm9udC1zaXplOiAyMHB4O1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuICAgIH1cblxuLmNvbnRlbnQge1xuICAgIHdpZHRoOiA5NSU7XG4gICAgb3ZlcmZsb3cteTogc2Nyb2xsO1xuICAgIGhlaWdodDogaW5oZXJpdDtcbiAgICBtYXJnaW4tYm90dG9tOiA1MHB4O1xufVxuXG4uY29sbGFib3JhdG9ycyB7XG4gICAgZGlzcGxheTogZ3JpZDtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmciAxZnIgMWZyIDFmciAxZnIgMWZyIDFmcjtcbiAgICBncmlkLXRlbXBsYXRlLXJvd3M6IDFmcjtcbiAgICBnYXA6IDBweCAwcHg7XG4gICAgZ3JpZC10ZW1wbGF0ZS1hcmVhczpcbiAgICAgICAgXCIuIC4gLiAuIC4gLiAuXCI7XG59XG5cbiAgICAuY29sbGFib3JhdG9yLWltYWdlIHtcbiAgICAgICAgaGVpZ2h0OiA3MHB4O1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDIwcHg7XG4gICAgfVxuXG4uY3JlZGl0cyB7XG4gICAgbWFyZ2luLWJvdHRvbTogMTUwcHg7XG59XG5cbi5saW5rIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5saW5rOmhvdmVyIHtcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbn0iXX0= */"] });
@@ -1226,8 +1242,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataService", function() { return DataService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
-/* harmony import */ var _time_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./time.service */ "./src/app/shared/services/time.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _time_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./time.service */ "./src/app/shared/services/time.service.ts");
+
+
 
 
 
@@ -1237,7 +1257,8 @@ class DataService {
     constructor(http, timeService) {
         this.http = http;
         this.timeService = timeService;
-        this.baseUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl;
+        this.airtimeUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].airtimeApiUrl;
+        this.apiUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl;
     }
     ngOnInit() {
         this.currentHourSubscription = this.timeService.currentHour$.subscribe(hour => {
@@ -1284,6 +1305,9 @@ class DataService {
             this.todaysSchedule = menuItems;
         });
     }
+    getShow(slug) {
+        return this.http.get(`${this.apiUrl}/profiles/${slug}/`).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(console.log));
+    }
     showHasAlreadyTakenPlace(show) {
         if (show && show.hour) {
             const nextShowsHour = show.hour;
@@ -1299,17 +1323,23 @@ class DataService {
         return currentHour.toString();
     }
     getWeekInfo() {
-        return this.http.get(`${this.baseUrl}/week-info`);
+        return this.http.get(`${this.airtimeUrl}/week-info`);
+    }
+    handleError(error) {
+        // Should send error to server for logging
+        console.error(error);
+        // Return an observable with user-facing error
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["throwError"])('Error fetching data');
     }
 }
-DataService.ɵfac = function DataService_Factory(t) { return new (t || DataService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_time_service__WEBPACK_IMPORTED_MODULE_3__["TimeService"])); };
+DataService.ɵfac = function DataService_Factory(t) { return new (t || DataService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_time_service__WEBPACK_IMPORTED_MODULE_5__["TimeService"])); };
 DataService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: DataService, factory: DataService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DataService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }, { type: _time_service__WEBPACK_IMPORTED_MODULE_3__["TimeService"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] }, { type: _time_service__WEBPACK_IMPORTED_MODULE_5__["TimeService"] }]; }, null); })();
 
 
 /***/ }),
@@ -1397,7 +1427,7 @@ __webpack_require__.r(__webpack_exports__);
 class TimeService {
     constructor(http) {
         this.http = http;
-        this.baseUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl;
+        this.baseUrl = src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].airtimeApiUrl;
         this.todaysWeekName = this.generateDayName(new Date());
         this.airtimeTime$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](new Date());
         this.currentHour$ = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](0);
@@ -1848,6 +1878,76 @@ class Barcelona92 {
 
 /***/ }),
 
+/***/ "./src/app/shows/show-item/show-item.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/shows/show-item/show-item.component.ts ***!
+  \********************************************************/
+/*! exports provided: ShowItemComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShowItemComponent", function() { return ShowItemComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_css_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/css.service */ "./src/app/css.service.ts");
+/* harmony import */ var src_app_shared_services_data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/shared/services/data.service */ "./src/app/shared/services/data.service.ts");
+
+
+
+
+
+class ShowItemComponent {
+    constructor(route, cssService, dataService) {
+        this.route = route;
+        this.cssService = cssService;
+        this.dataService = dataService;
+    }
+    ngOnInit() {
+        this.cssService.atHomePage = false;
+        this.routeSubscription = this.route.params.subscribe(params => {
+            this.slug = params['showSlug'];
+            // get show data via slug
+            this.showSubscription = this.dataService.getShow(this.slug).subscribe(show => {
+                console.log(show);
+                this.show = show;
+            });
+        });
+    }
+    ngOnDestroy() {
+        this.routeSubscription.unsubscribe();
+        this.showSubscription.unsubscribe();
+    }
+}
+ShowItemComponent.ɵfac = function ShowItemComponent_Factory(t) { return new (t || ShowItemComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_css_service__WEBPACK_IMPORTED_MODULE_2__["CssService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_services_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"])); };
+ShowItemComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ShowItemComponent, selectors: [["app-show-item"]], decls: 7, vars: 1, consts: [[1, "header"], [1, "title"], ["routerLink", "/", 1, "material-icons", "pointer"], [1, "content"]], template: function ShowItemComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "span", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "span", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, " close ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " Content\n");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx.slug, " ");
+    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLink"]], styles: ["[_nghost-%COMP%] {\n    height: 100%;\n    background-color: white;\n    display: inline-block;\n    padding: 50px;\n    top: 0;\n    position: absolute;\n    z-index: 1;\n    width: -moz-available;\n    opacity: 0.8;\n}\n\n.header[_ngcontent-%COMP%] {\n    display: grid;\n    grid-template-columns: 1fr 20px;\n}\n\n.title[_ngcontent-%COMP%] {\n        font-size: 20px;\n        margin-bottom: 20px;\n    }\n\n.content[_ngcontent-%COMP%] {\n    width: 95%;\n    overflow-y: scroll;\n    height: inherit;\n    margin-bottom: 50px;\n}\n\n.link[_ngcontent-%COMP%] {\n    cursor: pointer;\n}\n\n.link[_ngcontent-%COMP%]:hover {\n    text-decoration: underline;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2hvd3Mvc2hvdy1pdGVtL3Nob3ctaXRlbS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksWUFBWTtJQUNaLHVCQUF1QjtJQUN2QixxQkFBcUI7SUFDckIsYUFBYTtJQUNiLE1BQU07SUFDTixrQkFBa0I7SUFDbEIsVUFBVTtJQUNWLHFCQUFxQjtJQUNyQixZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksYUFBYTtJQUNiLCtCQUErQjtBQUNuQzs7QUFFSTtRQUNJLGVBQWU7UUFDZixtQkFBbUI7SUFDdkI7O0FBRUo7SUFDSSxVQUFVO0lBQ1Ysa0JBQWtCO0lBQ2xCLGVBQWU7SUFDZixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxlQUFlO0FBQ25COztBQUVBO0lBQ0ksMEJBQTBCO0FBQzlCIiwiZmlsZSI6InNyYy9hcHAvc2hvd3Mvc2hvdy1pdGVtL3Nob3ctaXRlbS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgcGFkZGluZzogNTBweDtcbiAgICB0b3A6IDA7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHotaW5kZXg6IDE7XG4gICAgd2lkdGg6IC1tb3otYXZhaWxhYmxlO1xuICAgIG9wYWNpdHk6IDAuODtcbn1cblxuLmhlYWRlciB7XG4gICAgZGlzcGxheTogZ3JpZDtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmciAyMHB4O1xufVxuXG4gICAgLnRpdGxlIHtcbiAgICAgICAgZm9udC1zaXplOiAyMHB4O1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAyMHB4O1xuICAgIH1cblxuLmNvbnRlbnQge1xuICAgIHdpZHRoOiA5NSU7XG4gICAgb3ZlcmZsb3cteTogc2Nyb2xsO1xuICAgIGhlaWdodDogaW5oZXJpdDtcbiAgICBtYXJnaW4tYm90dG9tOiA1MHB4O1xufVxuXG4ubGluayB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xufVxuXG4ubGluazpob3ZlciB7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7XG59Il19 */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ShowItemComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-show-item',
+                templateUrl: './show-item.component.html',
+                styleUrls: ['./show-item.component.css']
+            }]
+    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"] }, { type: src_app_css_service__WEBPACK_IMPORTED_MODULE_2__["CssService"] }, { type: src_app_shared_services_data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"] }]; }, null); })();
+
+
+/***/ }),
+
 /***/ "./src/app/streamer/marquee.ts":
 /*!*************************************!*\
   !*** ./src/app/streamer/marquee.ts ***!
@@ -2137,7 +2237,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    apiUrl: 'https://dublabbcn.airtime.pro/api',
+    apiUrl: 'https://api.dublab.es/api',
+    airtimeApiUrl: 'https://dublabbcn.airtime.pro/api',
     streamUrl: 'https://dublabbcn.out.airtime.pro/dublabbcn_b?_ga=2.122430920.212341158.1600332770-416543499.1597167299&_gac=1.149579138.1600332770.EAIaIQobChMInsq3m-Hj6wIVGIjVCh2bkwmCEAAYASAAEgIxuPD_BwE'
 };
 /*
