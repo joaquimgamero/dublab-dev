@@ -1,26 +1,18 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
 
-/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/styles.css":
-/*!*********************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??ref--12-1!./node_modules/postcss-loader/src??embedded!./src/styles.css ***!
-  \*********************************************************************************************************************/
+/***/ 2:
+/*!******************************!*\
+  !*** multi ./src/styles.css ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(true);
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap);"]);
-exports.push([module.i, "@import url(https://fonts.googleapis.com/icon?family=Material+Icons);"]);
-// Module
-exports.push([module.i, "@font-face {\n  font-family: Adieu;\n  src: url('adieu_custom.otf') format(\"opentype\");\n}\n:root {\n  --brand-purple: #562bff;\n  --icons-fx: scale(1.0);\n}\nbody,\nhtml {\n  height: 100%;\n  margin: 0;\n  overflow: hidden;\n}\n* {\n  font-family: \"Adieu\", sans-serif;\n  font-size: 12px;\n}\n*:focus {\n  outline: 0;\n}\na:link {\n  text-decoration: inherit;\n  color: var(--brand-purple);\n  cursor: pointer;\n}\na:visited {\n  text-decoration: inherit;\n  color: inherit;\n  cursor: auto;\n}\n.pointer {\n  cursor: pointer;\n}\n.cursor-default {\n  cursor: default;\n}\n.invisible {\n  display: none;\n}\n.transparent {\n  opacity: 0.2;\n}\n.blurred {\n  filter: blur(13px);\n}\n/* DROP DOWNS */\n.drop-down-display {\n  display: block;\n}\n/* DESKTOP */\n@media (min-width: 700px) {\n  :root {\n    --menu-height: 24px;\n    --logo-size: 75px;\n    --menu-padding: 10px;\n  }\n  @media (min-height: 1100px) {\n    body {\n      zoom: 112%;\n    }\n  }\n  @media (min-height: 1600px) {\n    body {\n      zoom: 125%;\n    }\n  }\n}\n/* MOBILE */\n@media (max-width: 700px) {\n  :root {\n    --menu-height: 24px;\n    --logo-size: 70px;\n    --menu-padding: 0px;\n  }\n}\n", "",{"version":3,"sources":["styles.css"],"names":[],"mappings":"AAGA;EACE,kBAAkB;EAClB,+CAA0D;AAC5D;AAEA;EACE,uBAAuB;EACvB,sBAAsB;AACxB;AAEA;;EAEE,YAAY;EACZ,SAAS;EACT,gBAAgB;AAClB;AAEA;EACE,gCAAgC;EAChC,eAAe;AACjB;AAEA;EACE,UAAU;AACZ;AAEA;EACE,wBAAwB;EACxB,0BAA0B;EAC1B,eAAe;AACjB;AAEA;EACE,wBAAwB;EACxB,cAAc;EACd,YAAY;AACd;AAEA;EACE,eAAe;AACjB;AAEA;EACE,eAAe;AACjB;AAEA;EACE,aAAa;AACf;AAEA;EACE,YAAY;AACd;AAEA;EACE,kBAAkB;AACpB;AAEA,eAAe;AACf;EACE,cAAc;AAChB;AAEA,YAAY;AACZ;EACE;IACE,mBAAmB;IACnB,iBAAiB;IACjB,oBAAoB;EACtB;EACA;IACE;MACE,UAAU;IACZ;EACF;EACA;IACE;MACE,UAAU;IACZ;EACF;AACF;AAEA,WAAW;AACX;EACE;IACE,mBAAmB;IACnB,iBAAiB;IACjB,mBAAmB;EACrB;AACF","file":"styles.css","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap\");\n@import url(\"https://fonts.googleapis.com/icon?family=Material+Icons\");\n\n@font-face {\n  font-family: Adieu;\n  src: url(\"src/assets/adieu_custom.otf\") format(\"opentype\");\n}\n\n:root {\n  --brand-purple: #562bff;\n  --icons-fx: scale(1.0);\n}\n\nbody,\nhtml {\n  height: 100%;\n  margin: 0;\n  overflow: hidden;\n}\n\n* {\n  font-family: \"Adieu\", sans-serif;\n  font-size: 12px;\n}\n\n*:focus {\n  outline: 0;\n}\n\na:link {\n  text-decoration: inherit;\n  color: var(--brand-purple);\n  cursor: pointer;\n}\n\na:visited {\n  text-decoration: inherit;\n  color: inherit;\n  cursor: auto;\n}\n\n.pointer {\n  cursor: pointer;\n}\n\n.cursor-default {\n  cursor: default;\n}\n\n.invisible {\n  display: none;\n}\n\n.transparent {\n  opacity: 0.2;\n}\n\n.blurred {\n  filter: blur(13px);\n}\n\n/* DROP DOWNS */\n.drop-down-display {\n  display: block;\n}\n\n/* DESKTOP */\n@media (min-width: 700px) {\n  :root {\n    --menu-height: 24px;\n    --logo-size: 75px;\n    --menu-padding: 10px;\n  }\n  @media (min-height: 1100px) {\n    body {\n      zoom: 112%;\n    }\n  }\n  @media (min-height: 1600px) {\n    body {\n      zoom: 125%;\n    }\n  }\n}\n\n/* MOBILE */\n@media (max-width: 700px) {\n  :root {\n    --menu-height: 24px;\n    --logo-size: 70px;\n    --menu-padding: 0px;\n  }\n}\n"]}]);
-// Exports
-module.exports = exports;
+module.exports = __webpack_require__(/*! /Users/jgam/OTHER/dublab/dublab/src/styles.css */"OmL/");
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/***/ "JPst":
 /*!*****************************************************!*\
   !*** ./node_modules/css-loader/dist/runtime/api.js ***!
   \*****************************************************/
@@ -125,7 +117,7 @@ function toComment(sourceMap) {
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/***/ "LboF":
 /*!****************************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
   \****************************************************************************/
@@ -405,15 +397,15 @@ module.exports = function (list, options) {
 
 /***/ }),
 
-/***/ "./src/styles.css":
+/***/ "OmL/":
 /*!************************!*\
   !*** ./src/styles.css ***!
   \************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-            var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--12-1!../node_modules/postcss-loader/src??embedded!./styles.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./src/styles.css");
+var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "LboF");
+            var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js??ref--12-1!../node_modules/postcss-loader/src??embedded!./styles.css */ "W9N5");
 
             content = content.__esModule ? content.default : content;
 
@@ -434,14 +426,26 @@ module.exports = content.locals || {};
 
 /***/ }),
 
-/***/ 2:
-/*!******************************!*\
-  !*** multi ./src/styles.css ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "W9N5":
+/*!*********************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--12-1!./node_modules/postcss-loader/src??embedded!./src/styles.css ***!
+  \*********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/jgam/OTHER/dublab/dublab/src/styles.css */"./src/styles.css");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "JPst");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(true);
+___CSS_LOADER_EXPORT___.push([module.i, "@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap);"]);
+___CSS_LOADER_EXPORT___.push([module.i, "@import url(https://fonts.googleapis.com/icon?family=Material+Icons);"]);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, "@font-face {\n  font-family: Adieu;\n  src: url('adieu_custom.otf') format(\"opentype\");\n}\n:root {\n  --brand-purple: #562bff;\n  --icons-fx: scale(1.0);\n}\nbody,\nhtml {\n  height: 100%;\n  margin: 0;\n  overflow: hidden;\n}\n* {\n  font-family: \"Adieu\", sans-serif;\n  font-size: 12px;\n}\n*:focus {\n  outline: 0;\n}\na:link {\n  text-decoration: inherit;\n  color: var(--brand-purple);\n  cursor: pointer;\n}\na:visited {\n  text-decoration: inherit;\n  color: inherit;\n  cursor: auto;\n}\n.pointer {\n  cursor: pointer;\n}\n.cursor-default {\n  cursor: default;\n}\n.invisible {\n  display: none;\n}\n.transparent {\n  opacity: 0.2;\n}\n.blurred {\n  filter: blur(13px);\n}\n/* DROP DOWNS */\n.drop-down-display {\n  display: block;\n}\n/* DESKTOP */\n@media (min-width: 700px) {\n  :root {\n    --menu-height: 24px;\n    --logo-size: 75px;\n    --menu-padding: 10px;\n  }\n  @media (min-height: 1100px) {\n    body {\n      zoom: 112%;\n    }\n  }\n  @media (min-height: 1600px) {\n    body {\n      zoom: 125%;\n    }\n  }\n}\n/* MOBILE */\n@media (max-width: 700px) {\n  :root {\n    --menu-height: 24px;\n    --logo-size: 70px;\n    --menu-padding: 0px;\n  }\n}\n.bottom-content-margin-normal {\n  padding-bottom: calc(var(--menu-height) + var(--menu-height) + var(--menu-height));\n}\n.bottom-content-margin-mixcloud {\n  padding-bottom: 140px;\n}\n.lds-hourglass {\n  display: inline-block;\n  position: relative;\n  width: 80px;\n  height: 80px;\n}\n", "",{"version":3,"sources":["webpack://src/styles.css"],"names":[],"mappings":"AAGA;EACE,kBAAkB;EAClB,+CAA0D;AAC5D;AAEA;EACE,uBAAuB;EACvB,sBAAsB;AACxB;AAEA;;EAEE,YAAY;EACZ,SAAS;EACT,gBAAgB;AAClB;AAEA;EACE,gCAAgC;EAChC,eAAe;AACjB;AAEA;EACE,UAAU;AACZ;AAEA;EACE,wBAAwB;EACxB,0BAA0B;EAC1B,eAAe;AACjB;AAEA;EACE,wBAAwB;EACxB,cAAc;EACd,YAAY;AACd;AAEA;EACE,eAAe;AACjB;AAEA;EACE,eAAe;AACjB;AAEA;EACE,aAAa;AACf;AAEA;EACE,YAAY;AACd;AAEA;EACE,kBAAkB;AACpB;AAEA,eAAe;AACf;EACE,cAAc;AAChB;AAEA,YAAY;AACZ;EACE;IACE,mBAAmB;IACnB,iBAAiB;IACjB,oBAAoB;EACtB;EACA;IACE;MACE,UAAU;IACZ;EACF;EACA;IACE;MACE,UAAU;IACZ;EACF;AACF;AAEA,WAAW;AACX;EACE;IACE,mBAAmB;IACnB,iBAAiB;IACjB,mBAAmB;EACrB;AACF;AAEA;EACE,kFAAkF;AACpF;AAEA;EACE,qBAAqB;AACvB;AAEA;EACE,qBAAqB;EACrB,kBAAkB;EAClB,WAAW;EACX,YAAY;AACd","sourcesContent":["@import url(\"https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap\");\n@import url(\"https://fonts.googleapis.com/icon?family=Material+Icons\");\n\n@font-face {\n  font-family: Adieu;\n  src: url(\"src/assets/adieu_custom.otf\") format(\"opentype\");\n}\n\n:root {\n  --brand-purple: #562bff;\n  --icons-fx: scale(1.0);\n}\n\nbody,\nhtml {\n  height: 100%;\n  margin: 0;\n  overflow: hidden;\n}\n\n* {\n  font-family: \"Adieu\", sans-serif;\n  font-size: 12px;\n}\n\n*:focus {\n  outline: 0;\n}\n\na:link {\n  text-decoration: inherit;\n  color: var(--brand-purple);\n  cursor: pointer;\n}\n\na:visited {\n  text-decoration: inherit;\n  color: inherit;\n  cursor: auto;\n}\n\n.pointer {\n  cursor: pointer;\n}\n\n.cursor-default {\n  cursor: default;\n}\n\n.invisible {\n  display: none;\n}\n\n.transparent {\n  opacity: 0.2;\n}\n\n.blurred {\n  filter: blur(13px);\n}\n\n/* DROP DOWNS */\n.drop-down-display {\n  display: block;\n}\n\n/* DESKTOP */\n@media (min-width: 700px) {\n  :root {\n    --menu-height: 24px;\n    --logo-size: 75px;\n    --menu-padding: 10px;\n  }\n  @media (min-height: 1100px) {\n    body {\n      zoom: 112%;\n    }\n  }\n  @media (min-height: 1600px) {\n    body {\n      zoom: 125%;\n    }\n  }\n}\n\n/* MOBILE */\n@media (max-width: 700px) {\n  :root {\n    --menu-height: 24px;\n    --logo-size: 70px;\n    --menu-padding: 0px;\n  }\n}\n\n.bottom-content-margin-normal {\n  padding-bottom: calc(var(--menu-height) + var(--menu-height) + var(--menu-height));\n}\n\n.bottom-content-margin-mixcloud {\n  padding-bottom: 140px;\n}\n\n.lds-hourglass {\n  display: inline-block;\n  position: relative;\n  width: 80px;\n  height: 80px;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
 
 /***/ })
