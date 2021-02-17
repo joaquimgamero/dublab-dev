@@ -3312,6 +3312,10 @@ class SeoService {
     }
     generateTags(config) {
         config = Object.assign({ title: 'dublab bcn', description: 'dublab bcn: ràdio online comunitària sense ànim de lucre. Un altaveu de propostes innovadores i experimentals a través de nous formats musicals que fomenten el diàleg intercultural.   ', image: 'https://dublab.es/assets/dublab-social.png', slug: '' }, config);
+        this.meta.updateTag({ name: 'description', content: config.description });
+        this.meta.updateTag({ itemprop: 'name', content: config.title });
+        this.meta.updateTag({ itemprop: 'description', content: config.description });
+        this.meta.updateTag({ itemprop: 'image', content: config.image });
         this.meta.updateTag({ name: 'twitter:card', content: 'summary' });
         this.meta.updateTag({ name: 'twitter:site', content: 'summary' });
         this.meta.updateTag({ name: 'twitter:title', content: config.title });
